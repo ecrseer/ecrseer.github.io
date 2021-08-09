@@ -1,0 +1,34 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+.pullc{
+    height: 30vh;
+}
+.pullc:hover{
+    height: 32vh;
+
+}
+.navbar{
+    height: 10vh;
+    background: springgreen;
+    position: sticky;
+    bottom: 0;
+}
+
+.sobremim{
+ height: 50vh;
+}
+.teste{
+    height:0;
+}
+
+.dum{
+    background: aqua;
+}
+.dois{
+    background: aquamarine;
+}
+.tres{
+    background: dodgerblue;
+}
