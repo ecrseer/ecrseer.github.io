@@ -2,33 +2,44 @@
     margin: 0 auto;
     padding: 0;
 }
+
 .pullc{
-    height: 30vh;
+    height: 28vh;
+    background-position-x: center;
+    background-position-y: center;
+    transition: 3s height;
 }
 .pullc:hover{
     height: 32vh;
+}
+.meusprojetos{
+    margin-top: 12vh;
+}
+.dum{
+    background-image: url("assets/ytime.png");
+}
+.dois{
+    background-image: url("assets/gdrive.png");
 
 }
+.tres{
+    background-image: url("assets/starwr.png");
+
+}
+
 .navbar{
     height: 10vh;
-    background: springgreen;
-    position: sticky;
+    width: 100%;
+    background: rgba(10, 162, 86, 0.91);
+    position: fixed;
     bottom: 0;
 }
 
 .sobremim{
  height: 50vh;
+    margin: 1vh;
 }
 .teste{
     height:0;
 }
 
-.dum{
-    background: aqua;
-}
-.dois{
-    background: aquamarine;
-}
-.tres{
-    background: dodgerblue;
-}
