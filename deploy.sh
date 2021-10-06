@@ -3,7 +3,12 @@
 git add . 
 git commit -m 'dply'
 git checkout gh-pages
+
 rm -rf *
+
+git add . 
+git commit -m 'dply'
+
 git merge main
 # build
 npm run build
