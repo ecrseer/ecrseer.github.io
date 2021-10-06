@@ -34,7 +34,7 @@ p{
 .navbar{
     height: 10vh;
     width: 100%;
-    background: rgba(10, 162, 86, 0.91);
+    background: rgb(147 187 211 / 91%);
     position: fixed;
     bottom: 0;
 }
