@@ -1,25 +1,26 @@
 #!/usr/bin/env sh
-
-# abort on errors
-set -e
-
+ 
+git add . 
+git commit -m 'dply'
+git checkout gh-pages
+rm -rf *
+git merge main
 # build
 npm run build
+
+mv dist .dist
+rm -rf *
+mv .dist/* .
+
 
 # navigate into the build output directory
 cd dist
 
-# if you are deploying to a custom domain
-# echo 'www.example.com' > CNAME
 
-git init
-git add -A
+
+git add .
 git commit -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io
- git push -f origin main
-
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:<USERNAME>/<REPO>.git main:gh-pages
-
-cd -
+ git push  origin main
+ 
