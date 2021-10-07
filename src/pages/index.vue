@@ -1,6 +1,6 @@
 <template>
-  <div id="app">     
-    
+  <div class="" >     
+
     <Descricao/>
     <BottomNav/>
   </div>
@@ -17,6 +17,7 @@ export default {
 </script>
 
 <style> 
+ 
 @media (max-width: 600px)
 {
   .facet_sidebar
