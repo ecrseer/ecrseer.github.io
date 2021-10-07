@@ -1,5 +1,6 @@
 <template>
   <div id="app">     
+    
     <Descricao/>
     <BottomNav/>
   </div>
