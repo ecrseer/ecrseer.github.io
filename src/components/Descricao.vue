@@ -1,10 +1,13 @@
 <template>
-  <main data-spy="scroll" data-target="#navbarinside" data-offset="0" class="mx-auto">
+  <main data-spy="scroll" data-target="#navbarinside" data-offset="0" class="mx-auto ">
      
     <div class="row">
-     <section class="col-12 col-sm-8 shadow-lg  bg-body rounded" id="meusprojetos">
-        <h6 class="d-block d-lg-none text-center">meus projetos</h6>
-        
+     <section class="col-11 col-sm-6 shadow-lg  bg-body rounded" id="meusprojetos">
+        <h6 class="d-block text-center">Projetos</h6>
+
+        <a href="libfyinfnet.netlify.app/">
+        <div class="pullc border bs rounded" :style="imgLibfy"></div>
+      </a>
         <a href="http://time2shareyt.vercel.app/" class="">
         <div :style=imgYt class="pullc border bs rounded" ></div
       ></a>
@@ -14,6 +17,7 @@
        <a href="https://g4br13l-ju5t1n0.vercel.app/">
         <div class="pullc border bs rounded" :style="imgSw"></div>
       </a>
+      
       
       </section>
       <section class="sobremim col-12 col-sm-4 shadow-lg  bg-body rounded" id="sobremim">
@@ -41,7 +45,7 @@
 export default {
   name: "Descricao",
   data() {
-    let imgYt, imgGd, imgSw;
+    let imgYt, imgGd, imgSw,imgLibfy;
     let baseBackgrnd = (img) => {
       let requestImg = require(`@/assets/${img}`);
       return { "background-image": `url(${requestImg})` };
@@ -49,10 +53,12 @@ export default {
     imgGd = baseBackgrnd("gdrive.png");
     imgYt = baseBackgrnd("ytime.png");
     imgSw = baseBackgrnd("starwr.png");
+    imgLibfy = baseBackgrnd("libfy.png");
     return {
       imgGd,
       imgYt,
       imgSw,
+      imgLibfy
     };
   },
   props: {
@@ -69,15 +75,14 @@ export default {
   }
 .pullc {
   width: 100%;
-  height: 28vh; 
+  height: 13vh; 
   background-position-x: center;
   background-position-y: center;
   transition: 1s height,2s box-shadow;
     
 }
 .pullc:hover {
-  height: 32vh;
-  
+  height: 28vh;  
   box-shadow: inset 0 0 0 1000px rgb(224 237 237 / 42%);
 }
 </style>
