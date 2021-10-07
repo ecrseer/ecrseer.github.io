@@ -1,19 +1,21 @@
 <template>
-  <main data-spy="scroll" data-target="#navbarinside" data-offset="0">
-    <section id="meusprojetos">
+  <main data-spy="scroll" data-target="#navbarinside" data-offset="0" class="column">
+    
+    <section id="meusprojetos ">
       <h6 class="d-block d-lg-none text-center">meus projetos</h6>
       <a href="http://time2shareyt.vercel.app/">
-        <div class="pullc" :style=imgGd></div
+        <div class="pullc" :style=imgYt></div
       ></a>
       <a href="https://gd-sheet-y2.vercel.app/">
-        <div class="pullc dois"></div>
+        <div class="pullc " :style="imgGd"></div>
       </a>
-      <a href="https://g4br13l-ju5t1n0.vercel.app/">
-        <div class="pullc tres"></div>
+       <a href="https://g4br13l-ju5t1n0.vercel.app/">
+        <div class="pullc " :style="imgSw"></div>
       </a>
+       
     </section>
 
-    <section class="sobremim" id="sobremim">
+      <section class="sobremim " id="sobremim">
       <p>Descrição academica</p>
 
       <div class="card rounded shadow-lg">
@@ -31,6 +33,7 @@
         </main>
       </div>
     </section>
+    
   </main>
 </template>
 <script>
@@ -43,6 +46,8 @@ export default {
       return { "background-image": `url(${requestImg})` };
     };
     imgGd=baseBackgrnd('gdrive.png')
+    imgYt=baseBackgrnd('ytime.png')
+    imgSw=baseBackgrnd('starwr.png')
     return {
         imgGd,
         imgYt,
@@ -73,6 +78,7 @@ a {
 }
 .pullc{
     height: 28vh;
+    padding:2vh;
     background-position-x: center;
     background-position-y: center;
     transition: 3s height;

@@ -48,4 +48,12 @@ li {
 a {
   color: #42b983;
 }
+
+.navbar{
+    height: 10vh;
+    width: 100%;
+    background: rgb(223 236 236 / 94%);
+    position: fixed;
+    bottom: 0;
+}
 </style>

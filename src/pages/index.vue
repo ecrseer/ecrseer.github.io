@@ -16,4 +16,11 @@ export default {
 </script>
 
 <style> 
+@media (max-width: 600px)
+{
+  .facet_sidebar
+   {
+    display: none;
+   }
+}
 </style>
