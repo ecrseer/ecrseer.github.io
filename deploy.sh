@@ -1,25 +1,16 @@
 #!/usr/bin/env sh
+ 
+git add . 
+git commit -m 'dply'
+git push origin main
+yarn build
+mv dist ../dist
+git checkout gh-pages
 
-# abort on errors
-set -e
+cp -r ../dist/* .
 
-# build
-npm run build
 
-# navigate into the build output directory
-cd dist
-
-# if you are deploying to a custom domain
-# echo 'www.example.com' > CNAME
-
-git init
-git add -A
-git commit -m 'deploy'
-
-# if you are deploying to https://<USERNAME>.github.io
- git push -f origin main
-
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:<USERNAME>/<REPO>.git main:gh-pages
-
-cd -
+git add . 
+git commit -m 'dply'
+git push origin gh-pages
+git checkout main
