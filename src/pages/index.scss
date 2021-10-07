@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    
+    padding: 0;
+}
+p{
+    margin-bottom: 0;
+}
+
+.pullc{
+    width: 100%;
+    height: 28vh;
+    transition: 1s all;
+    background-size:cover;
+
+} 
+.pullc:hover{
+    height: 32vh;
+}
+.meusprojetos{
+    margin-top: 12vh;
+} 
+
+.navbar{
+    height: 10vh;
+    width: 100%;
+    background: rgb(147 187 211 / 91%);
+    position: fixed;
+    bottom: 0;
+}
+
+.sobremim{
+ height: 50vh;
+    margin: 1vh;
+}
+.teste{
+    height:0;
+}
+
