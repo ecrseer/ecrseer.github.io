@@ -1,6 +1,6 @@
 <template>
-  <div id="app"> 
-  <index></index>
+  <div id="app" class="bg-dark text-white"> 
+  <Index></Index>
 
     <BottomNav/>
   </div>
@@ -8,9 +8,9 @@
 
 <script> 
 import BottomNav from './components/BottomNav.vue'
-import index from './pages/index.vue'
+import Index from './pages/Index.vue'
 export default {
-  components: { index, BottomNav },
+  components: { Index, BottomNav },
   name: 'App', 
 }
 </script>
@@ -22,6 +22,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
    
     color: #507aa4; 
-    background-color: #fdfbf7;
+    background-color: #fffefc;
+    overflow-x: none;
 }
+
 </style>

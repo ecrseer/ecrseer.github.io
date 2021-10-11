@@ -1,34 +1,38 @@
 <template>
-  <main data-spy="scroll" data-target="#navbarinside" data-offset="0">
+  <main data-spy="scroll" 
+  data-target="#navbarinside" data-offset="0"  >
     <div class="row">
       <section
         class="ml-4 col-11 shadow-lg bg-body rounded"
-        :class="selectPg ? 'col-sm-12' : 'col-sm-7'"
+        :class="selectPg === '' ? 'col-sm-6' : 'col-sm-12'"
         id="meusprojetos"
       >
         <h6 class="d-block text-center">Projetos</h6>
-   
-        <RadioContainer v-bind:selectPg="selectPg"
-         v-bind:pagina='"libfy"'></RadioContainer>
 
-        <RadioContainer v-bind:selectPg="selectPg"
-         v-bind:pagina='"gdrive"'></RadioContainer>
+        <RadioContainer
+          v-bind:selectPg="selectPg"
+          v-bind:pagina="'libfy'"          
+          v-bind:dados="DADOSPAGINAS.libfy"
+        ></RadioContainer>
 
-        <RadioContainer v-bind:selectPg="selectPg"
-         v-bind:pagina='"starwr"'></RadioContainer>
+        <RadioContainer
+          v-bind:selectPg="selectPg"
+          v-bind:pagina="'gdrive'"
+          v-bind:dados="DADOSPAGINAS.gdrive">
+          </RadioContainer>
 
-        <RadioContainer v-bind:selectPg="selectPg"
-         v-bind:pagina='"ytime"'></RadioContainer>
+        <RadioContainer
+          v-bind:selectPg="selectPg"
+          v-bind:pagina="'starwr'"
+          v-bind:dados="DADOSPAGINAS.starwr">
+          </RadioContainer>
 
-        <a href="http://time2shareyt.vercel.app/" class="">
-          b
-        </a>
-        <a href="https://gd-sheet-y2.vercel.app/">
-          b
-        </a>
-        <a href="https://g4br13l-ju5t1n0.vercel.app/">
-          b
-        </a>
+        <RadioContainer
+          v-bind:selectPg="selectPg"
+          v-bind:pagina="'ytime'"
+          v-bind:dados="DADOSPAGINAS.ytime"
+        ></RadioContainer>
+ 
       </section>
 
       <section
@@ -37,15 +41,15 @@
       >
         <p>Descrição academica</p>
 
-        <div class="card rounded shadow-lg">
-          <main class="card-body">
+        <div class="card bg-dark rounded shadow-lg">
+          <main class="card-body ">
             <p>Gabriel Justino</p>
             <h4>Instituto INFNET</h4>
             <p>Engenharia de software</p>
           </main>
         </div>
 
-        <div class="card rounded shadow-lg">
+        <div class="card bg-dark rounded shadow-lg">
           <main class="card-body">
             <h4>---</h4>
             <p>---</p>
@@ -56,16 +60,20 @@
   </main>
 </template>
 <script>
-import RadioContainer from './RadioContainer.vue';
+import RadioContainer from "./RadioContainer.vue";
+import DADOSPAGINAS from "../const"; 
 export default {
   components: { RadioContainer },
   name: "Descricao",
-  data() { 
-    return { 
-      selectPg: "",
+  data() {
+    return {
+      selectPg: '',
+      DADOSPAGINAS, 
     };
-  }, 
-
+  },
+  computed: {
+    
+  },
 };
 </script>
 

@@ -1,5 +1,7 @@
 <template>
-  <div class="pullc border bs rounded" :style="estilizacaoPg">
+  <div class="pullc border bs rounded" 
+  :class="selectPg ? '' : 'pullcHover'"
+  :style="estilizacaoPg">
     <input
       type="radio"
       id=""
@@ -18,28 +20,33 @@
         v-model="selectPg"
         class="invisibleRadio fas fa-window-close"
       />
+      <a :href="dados.verMaisUrl"><h5>Ver o website</h5></a>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut qui alias,
-        eum nesciunt, distinctio suscipit expedita perferendis nisi pariatur
-        odit provident. Placeat, beatae? Suscipit fuga non id accusamus quis
-        nisi?
+        {{descricaoPg}}
       </p>
     </div>
   </div>
 </template>
 
 <script>
+/* eslint-disable */
+import axios from "axios";
 export default {
   name: "RadioContainer",
+  data(){
+      return {
+          descricaoPg:'Um projetinho que'
+      }
+  },
   props: {
     selectPg: String,
     pagina: String,
+    dados:Object
   },
+  
   methods: {
-
     /* eslint-disable */
-    checkUncheck(val) {
-        debugger
+    checkUncheck(val) { 
       if (this.selectPg === val) {
         this.selectPg = "";
       }
@@ -48,6 +55,13 @@ export default {
       let requestImg = require(`@/assets/${img}`);
       return { "background-image": `url(${requestImg})` };
     },
+    async carregaDadosPaginas() { 
+        if(this && this.dados){
+            let meuRepoURL = `https://api.github.com/repos/ecrseer/${this.dados.nomeRepositorio}`;
+            let resp =  axios.get(meuRepoURL);            
+        }   
+        
+      }
   },
   computed: {
     estilizacaoPg() {
@@ -61,13 +75,24 @@ export default {
       return estilizacaoPgLibfy;
     },
   },
-};
+  mounted() {     
+      
+    this.carregaDadosPaginas();
+    }
+
+
+  }
+
+
+
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .bs {
-  box-shadow: inset 0 0 0 1000px rgb(224 237 237 / 87%);
+  box-shadow: inset 0 0 0 1000px rgb(55 55 55 / 87%);
 }
 .pullc {
   width: 100%;
@@ -86,11 +111,11 @@ export default {
   appearance: none;
   border: none;
 }
-.pullc:hover {
+.pullcHover:hover {
   height: 28vh;
-  box-shadow: inset 0 0 0 1000px rgb(224 237 237 / 42%);
+  box-shadow: inset 0 0 0 1000px rgb(55 55 55 / 72%);
 }
 .pullc:checked {
-  box-shadow: inset 0 0 0 1000px rgb(1 1 1 / 92%);
+  box-shadow: inset 0 0 0 1000px rgb(1 1 1 / 95%);
 }
 </style>

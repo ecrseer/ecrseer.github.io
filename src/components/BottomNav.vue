@@ -36,7 +36,7 @@ export default {
 <style scoped>
  
 .navbar{
-    height: 10vh;
+    height: 7vh;
     width: 100%;
     background: rgb(223 236 236 / 94%);
     position: fixed;

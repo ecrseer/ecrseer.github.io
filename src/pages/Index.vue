@@ -8,8 +8,7 @@
 import Descricao from '../components/Descricao.vue'
 export default {
   components: { Descricao  },
-  name: 'Index',
-   
+  name: 'Index',   
 }
 </script>
 
