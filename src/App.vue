@@ -1,13 +1,16 @@
 <template>
   <div id="app"> 
   <index></index>
+
+    <BottomNav/>
   </div>
 </template>
 
 <script> 
+import BottomNav from './components/BottomNav.vue'
 import index from './pages/index.vue'
 export default {
-  components: { index },
+  components: { index, BottomNav },
   name: 'App', 
 }
 </script>

@@ -1,16 +1,13 @@
 <template>
-  <div class="" >     
-
-    <Descricao/>
-    <BottomNav/>
+  <div >     
+    <Descricao />
   </div>
 </template>
 
-<script> 
-import BottomNav from '../components/BottomNav.vue'
+<script>  
 import Descricao from '../components/Descricao.vue'
 export default {
-  components: { Descricao, BottomNav },
+  components: { Descricao  },
   name: 'Index',
    
 }
