@@ -18,12 +18,12 @@
         value="libfy"
         v-on:click="checkUncheck($event.target.value)"
         v-model="selectPg"
-        class="invisibleRadio fas fa-window-close"
+        class="invisibleRadio far fa-times-circle text-white"
       />
       <a :href="dados.verMaisUrl"><h5>Ver o website</h5></a>
       <p>
         {{descricaoPg}}
-      </p>
+      </p> 
     </div>
   </div>
 </template>
@@ -90,7 +90,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped> 
 .bs {
   box-shadow: inset 0 0 0 1000px rgb(55 55 55 / 87%);
 }

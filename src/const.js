@@ -5,21 +5,21 @@ let dadosPaginas = {
         'descricao':''
     }, 
     starwr:{
-        'verMaisUrl':'http://time2shareyt.vercel.app/',
+        'verMaisUrl':'https://g4br13l-ju5t1n0.vercel.app/',
         'nomeRepositorio':'YTime2',
         'descricao':''
     },
     libfy:{
-        'verMaisUrl':'http://time2shareyt.vercel.app/',
+        'verMaisUrl':'https://libfyinfnet.netlify.app',
         'nomeRepositorio':'YTime2',
         'descricao':''
     },
     gdrive:{
-        'verMaisUrl':'http://time2shareyt.vercel.app/',
+        'verMaisUrl':'https://gd-sheet-y2.vercel.app/',
         'nomeRepositorio':'YTime2',
         'descricao':''
     }
 
-}
+} 
 
 export default dadosPaginas;
