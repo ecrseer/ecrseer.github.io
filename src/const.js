@@ -6,17 +6,17 @@ let dadosPaginas = {
     }, 
     starwr:{
         'verMaisUrl':'https://g4br13l-ju5t1n0.vercel.app/',
-        'nomeRepositorio':'YTime2',
+        'nomeRepositorio':'g4br13lJu5t1n0',
         'descricao':''
     },
     libfy:{
         'verMaisUrl':'https://libfyinfnet.netlify.app',
-        'nomeRepositorio':'YTime2',
+        'nomeRepositorio':'Libfy',
         'descricao':''
     },
     gdrive:{
         'verMaisUrl':'https://gd-sheet-y2.vercel.app/',
-        'nomeRepositorio':'YTime2',
+        'nomeRepositorio':'googleDriveSheet',
         'descricao':''
     }
 

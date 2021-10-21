@@ -20,10 +20,15 @@
         v-model="selectPg"
         class="invisibleRadio far fa-times-circle text-white"
       />
-      <a :href="dados.verMaisUrl"><h5>Ver o website</h5></a>
-      <p>
+       <p>
         {{descricaoPg}}
       </p> 
+      <div>
+
+      <a :href="dados.verMaisUrl"><h5>Ver o website</h5></a>
+      <a :href="linkRepositorio"><h5><span class="fab fa-github"></span>repositorio</h5></a>
+      </div>
+     
     </div>
   </div>
 </template>
@@ -35,7 +40,8 @@ export default {
   name: "RadioContainer",
   data(){
       return {
-          descricaoPg:'Um projetinho que'
+          descricaoPg:'Um projetinho que',
+          linkRepositorio:'#'
       }
   },
   props: {
@@ -57,8 +63,20 @@ export default {
     },
     async carregaDadosPaginas() { 
         if(this && this.dados){
-            let meuRepoURL = `https://api.github.com/repos/ecrseer/${this.dados.nomeRepositorio}`;
-            let resp =  axios.get(meuRepoURL);            
+          let usuario="ecrseer";
+          if(this.dados.nomeRepositorio=='Libfy'){
+            this.linkRepositorio = "https://github.com/21E221E3GRPEDS01C2N2P1/Libfy"
+            usuario="21E221E3GRPEDS01C2N2P1"
+            return
+          }
+            let meuRepoURL = `https://api.github.com/repos/${usuario}/${this.dados.nomeRepositorio}`;
+            let resp =  await axios.get(meuRepoURL);     
+            if(resp.data){
+              this.linkRepositorio = resp.data.html_url  
+              this.descricaoPg = resp.data.description
+            }
+            
+            
         }   
         
       }
