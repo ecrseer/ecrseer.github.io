@@ -4,7 +4,8 @@
     <div class="row">
       <section
         class="ml-4 col-11 shadow-lg bg-body rounded"
-        :class="selectPg === '' ? 'col-sm-6' : 'col-sm-12'"
+        :class="divClicadaTamanho"
+        v-on:click="recalculaTamanho"
         id="meusprojetos"
       >
         <h6 class="d-block text-center">Projetos</h6>
@@ -52,7 +53,7 @@
         <div class="card bg-dark rounded shadow-lg">
           <main class="card-body">
             <h4>---</h4>
-            <p>---</p>
+            <p>{{DESCR_LIN}}</p>
           </main>
         </div>
       </section>
@@ -61,19 +62,39 @@
 </template>
 <script>
 import RadioContainer from "./RadioContainer.vue";
-import DADOSPAGINAS from "../const"; 
+import dados from "../const"; 
 export default {
   components: { RadioContainer },
   name: "Descricao",
   data() {
     return {
       selectPg: '',
-      DADOSPAGINAS, 
+      DADOSPAGINAS:dados.dadosPaginas,
+      DESCR_LIN:dados.descricaoLin,
+      divClicadaTamanho:'col-sm-6'
     };
   },
   computed: {
     
   },
+  watch:{
+    selectPg(prev,next){
+      console.log(`prev ${prev}`)
+      console.log(`next ${next}`)
+    }
+  },
+  methods:{
+    recalculaTamanho(){
+
+      if(this.selectPg==''){
+        this.divClicadaTamanho=''
+      }else{        
+        this.divClicadaTamanho='col-sm-6'
+      }
+
+
+    }
+  }
 };
 </script>
 

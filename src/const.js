@@ -1,4 +1,4 @@
-let dadosPaginas = { 
+const dadosPaginas = { 
     ytime:{
         'verMaisUrl':'http://time2shareyt.vercel.app/',
         'nomeRepositorio':'YTime2',
@@ -21,5 +21,11 @@ let dadosPaginas = {
     }
 
 } 
+const descricaoLin='Estudante de Engenharia de Software interessado na aprimoração dos conhecimentos tecnologicos bem como no leque de coisas que é possível fazer com tecnologia.'
 
-export default dadosPaginas;
+const constantes ={
+    dadosPaginas,
+    descricaoLin
+}
+
+export default constantes;

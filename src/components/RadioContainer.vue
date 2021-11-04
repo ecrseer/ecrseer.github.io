@@ -65,8 +65,8 @@ export default {
         if(this && this.dados){
           let usuario="ecrseer";
           if(this.dados.nomeRepositorio=='Libfy'){
-            this.linkRepositorio = "https://github.com/21E221E3GRPEDS01C2N2P1/Libfy"
-            usuario="21E221E3GRPEDS01C2N2P1"
+            this.linkRepositorio = "https://github.com/z21E221E3GRPEDS01C2N2P1/Libfy"
+            usuario="z21E221E3GRPEDS01C2N2P1"
             return
           }
             let meuRepoURL = `https://api.github.com/repos/${usuario}/${this.dados.nomeRepositorio}`;
